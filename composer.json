@@ -1,0 +1,36 @@
+{
+    "name": "pushinbr/pam-native-contacts",
+    "description": "Device contacts and the SMS composer for PAM Native: paged contact reads, the new contact form and prefilled SMS.",
+    "type": "pam-native-plugin",
+    "license": "Apache-2.0",
+    "keywords": [
+        "pam",
+        "pam-native",
+        "php",
+        "android",
+        "ios",
+        "contacts",
+        "sms"
+    ],
+    "require": {
+        "php": "^8.5",
+        "pushinbr/pam-native": "^1.46"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pam\\Native\\Contacts\\": "src/"
+        }
+    },
+    "extra": {
+        "pam-native": {
+            "plugin": "pam-native.plugin.json"
+        }
+    },
+    "scripts": {
+        "test": "php tests/run.php"
+    },
+    "config": {
+        "platform-check": true,
+        "sort-packages": true
+    }
+}

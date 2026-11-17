@@ -56,7 +56,7 @@ Sms::compose(['+5511999999999'], 'Hi!', static function (): void {});
 
 | Platform | Support | Notes |
 | --- | --- | --- |
-| Android | API 26+ | Modules `contacts` and `sms`; no extra dependencies |
+| Android | API 24+ | Modules `contacts` and `sms`; no extra dependencies |
 | iOS | 15.0+ | Contacts, ContactsUI, MessageUI |
 | PAM Native | 1.46.0 to < 2.0.0 | From `pam-native.plugin.json`; PHP 8.5+ |
 

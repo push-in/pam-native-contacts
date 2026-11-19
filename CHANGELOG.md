@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2 - 2026-11-19
+
+- Fixed: Android 11+: the plugin manifest declares the SENDTO smsto: query, so Sms::isAvailable()/compose() keep working with PAM Native 1.54 (the host manifest no longer queries smsto).
+
 ## 0.1.1 - 2026-11-17
 
 - Android 7.0/7.1 support: the plugin declares minSdk 24 and every newer Android API it uses has a version check and fallback. Requires PAM Native 1.53.1 or later.

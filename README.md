@@ -65,10 +65,12 @@ Sms::compose(['+5511999999999'], 'Hi!', static function (): void {});
 
 | Platform | Declared by the plugin |
 | --- | --- |
-| Android | `android.permission.READ_CONTACTS` |
+| Android | `android.permission.READ_CONTACTS`; package visibility (`<queries>`) for `SENDTO smsto:` |
 | iOS | `NSContactsUsageDescription` ("Find people you know.") |
 
 The new-contact form needs no contacts permission (Android `ACTION_INSERT`, iOS `CNContactViewController`).
+
+The plugin manifest makes the SMS composer visible on Android 11+, so `Sms` works without the app declaring `smsto` in `android.queries` (PAM Native 1.54 removed it from the host manifest).
 
 <a id="migrating"></a>
 ## <picture><img src=".github/assets/icons/layers.svg" width="22" height="22" alt=""></picture> Migrating from the core

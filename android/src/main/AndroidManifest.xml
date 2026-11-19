@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Merged into the host app. Sms.isAvailable()/compose() resolve the smsto: composer, which
+     Android 11+ package visibility hides unless the app queries it; PAM Native 1.54 no longer
+     declares it in the host manifest. The contact form (ACTION_INSERT) is only started, never
+     resolved, so it needs no query. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+            <data android:scheme="smsto" />
+        </intent>
+    </queries>
+</manifest>
